@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Data format description &mdash; EDE user manual 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Softwares" href="../softwares/softwares.html" />
+    <link rel="prev" title="Field installation" href="../field_install/field_install.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EDE user manual
+          
+
+          
+            
+            <img src="../../_static/logo2.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../field_install/field_install.html">Field installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data format description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#directory-structure">Directory structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#header-file">Header file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#data-file">Data file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/softwares.html">Softwares</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EDE user manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Data format description</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/en/data_format/data_format.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-format-description">
+<h1>Data format description<a class="headerlink" href="#data-format-description" title="Permalink to this headline">¶</a></h1>
+<p>This section describes the directory structure of the EDE SSD and the format of the binary data.</p>
+<div class="section" id="directory-structure">
+<h2>Directory structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h2>
+<p>The SSD attached to EDE unit are a 128 GigaBytes drive with two partitions.
+Only 32 GigaBytes of this SSD is used for storage in partition named <code class="code docutils literal notranslate"><span class="pre">MTDAT</span></code> and the other unused partition is named <code class="code docutils literal notranslate"><span class="pre">SCRATCH</span></code>.</p>
+<div class="figure align-center" id="id1">
+<img alt="../../_images/dir1.png" src="../../_images/dir1.png" />
+<p class="caption"><span class="caption-text">Example of  SSD partitions names</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The data is stored in the root directory of the <code class="code docutils literal notranslate"><span class="pre">MTDAT</span></code> partition as will as two config files.
+The first file <code class="code docutils literal notranslate"><span class="pre">auto_init.cfg</span></code> is used for suppling the job list in automatic mode. While the file <code class="code docutils literal notranslate"><span class="pre">init.cfg</span></code> contaons
+the last used configuration (frequency, Ex dipole and Ey dipole) in Manual mode.</p>
+<div class="figure align-center" id="id2">
+<img alt="../../_images/dir2.png" src="../../_images/dir2.png" />
+<p class="caption"><span class="caption-text">Example of root directory structure</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Each recording directory contains one header file, kml file contains the location alongside the data from one continuous run.
+The data is distributed among equally time range files depending of the sampling frequency
+i.e. in a 256 Hz run one file holds the data from one hour and in a 64 Hz run one files holds the data from 24 hours recording.</p>
+<div class="figure align-center" id="id3">
+<img alt="../../_images/dir3.png" src="../../_images/dir3.png" />
+<p class="caption"><span class="caption-text">Example of header and data files inside one run folder</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="header-file">
+<h2>Header file<a class="headerlink" href="#header-file" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following tuturial has been carried out using <em>VERSION: Apr 12 2021</em>. May looks slightly different in other versions.</p>
+</div>
+<p>The following is an example of the header file containing all the recording parameters for each run.</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="nl">EDE</span><span class="p">:</span> <span class="mi">115</span>
+<span class="nl">VERSION</span><span class="p">:</span> <span class="n">Apr</span> <span class="mi">12</span> <span class="mi">2021</span>
+<span class="nl">TYPE</span><span class="p">:</span> <span class="n">E</span>
+<span class="nl">SAMPLECOUNTER</span><span class="p">:</span> <span class="mi">1</span>
+<span class="nl">LSB</span><span class="p">:</span> <span class="mf">1.164153218e-6</span> <span class="n">mV</span>
+<span class="nl">GAIN</span><span class="p">:</span> <span class="mi">10</span>
+<span class="nl">LP</span><span class="p">:</span> <span class="mi">1</span>
+
+<span class="nl">LONGITUDE</span><span class="p">:</span> <span class="mf">650.414612</span>
+<span class="nl">LATITUDE</span><span class="p">:</span> <span class="mf">5211.215332</span>
+<span class="nl">SYSTEMSTARTTIME</span><span class="p">:</span> <span class="mi">18</span> <span class="mi">46</span> <span class="mi">22</span>
+<span class="nl">SYSTEMSTARTDATE</span><span class="p">:</span> <span class="mi">2021</span> <span class="mo">07</span> <span class="mi">14</span>
+<span class="nl">PPSDELAY</span><span class="p">:</span> <span class="mi">46</span> <span class="n">us</span>
+<span class="nl">SAMPLERATE</span><span class="p">:</span> <span class="mi">256</span>
+<span class="nl">Ex</span><span class="p">:</span> <span class="mf">59.5</span> <span class="n">m</span>
+<span class="nl">Ey</span><span class="p">:</span> <span class="mf">54.5</span> <span class="n">m</span>
+<span class="nl">STARTTIME</span><span class="p">:</span> <span class="mi">18</span> <span class="mi">48</span> <span class="mo">00</span> <span class="mo">000</span>
+<span class="nl">STARTDATE</span><span class="p">:</span> <span class="mi">14</span> <span class="mo">07</span> <span class="mi">2021</span>
+<span class="nl">STOPTIME</span><span class="p">:</span> <span class="mi">09</span> <span class="mo">06</span> <span class="mi">16</span> <span class="mo">000</span>
+<span class="nl">STOPDATE</span><span class="p">:</span> <span class="mi">16</span> <span class="mo">07</span> <span class="mi">2021</span>
+<span class="nl">STOPFILENUMBER</span><span class="p">:</span> <span class="mo">010</span>
+<span class="nl">NSAMPLES</span><span class="p">:</span> <span class="mi">35301376</span>
+</pre></div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="data-file">
+<h2>Data file<a class="headerlink" href="#data-file" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>The data files are stored in a binary format with the extension <code class="code docutils literal notranslate"><span class="pre">.ets</span></code> (EDE time seires). The binary file structure contains no header bytes and the EDE stores three values at each sample.</dt><dd><ul class="simple">
+<li><p><strong>Sample Counter</strong> as int32</p></li>
+<li><p><strong>Ex</strong> as int32</p></li>
+<li><p><strong>Ey</strong> as int32</p></li>
+</ul>
+</dd>
+</dl>
+<p>To get the measured data in mV, the values in the binary file must be multiplied by the <em>LSB</em> and divided by the <em>Gain</em> from the header file.</p>
+<div class="figure align-center" id="id4">
+<img alt="../../_images/dir4.png" src="../../_images/dir4.png" />
+<p class="caption"><span class="caption-text">Example of data file structure</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../softwares/softwares.html" class="btn btn-neutral float-right" title="Softwares" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../field_install/field_install.html" class="btn btn-neutral float-left" title="Field installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Institut für Geophysik, University of Münster.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

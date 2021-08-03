@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Field installation &mdash; EDE user manual 1.0.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Data format description" href="../data_format/data_format.html" />
+    <link rel="prev" title="Overview" href="../overview/overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> EDE user manual
+          
+
+          
+            
+            <img src="../../_static/logo2.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption" role="heading"><span class="caption-text">User Manual</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/overview.html">Overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Field installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#requirements">Requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#automatic-mode">Automatic Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#make-a-job-list-file">1. Make a job list file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#turn-on-the-ede">2. Turn on the EDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-automatik-mode">3. Select Automatik mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-for-gps-synchronization">3. Wait for GPS synchronization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wait-for-job-list-check-up">4. Wait for Job list check up</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#recording-screen">5. Recording screen</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#manual-mode">Manual Mode</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">1. Turn on the EDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-manual-mode">2. Select Manual mode</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">3. Wait for GPS synchronization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#connect-usb-stick">4. Connect USB stick</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-sampling-frequency">5. Select sampling frequency</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#select-dipole-lengths">6. Select dipole lengths</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">7. Recording screen</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../data_format/data_format.html">Data format description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../softwares/softwares.html">Softwares</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">EDE user manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Field installation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/en/field_install/field_install.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="field-installation">
+<h1>Field installation<a class="headerlink" href="#field-installation" title="Permalink to this headline">¶</a></h1>
+<p>To install the <strong>EDE</strong> telluric station, a few of components are required to do so.</p>
+<div class="section" id="requirements">
+<h2>Requirements<a class="headerlink" href="#requirements" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><strong>EDE unit</strong></p></td>
+<td><div class="figure align-default">
+<img alt="../../_images/unit.jpg" src="../../_images/unit.jpg" />
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>GPS antenna</strong></p></td>
+<td><div class="figure align-default">
+<img alt="../../_images/gps.jpg" src="../../_images/gps.jpg" />
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>Power cable</strong></p></td>
+<td><div class="figure align-default">
+<img alt="../../_images/power_cable.jpg" src="../../_images/power_cable.jpg" />
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Ground cable</strong></p></td>
+<td><div class="figure align-default">
+<img alt="../../_images/gnd_cable.jpg" src="../../_images/gnd_cable.jpg" />
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>5 x electric field electrodes</strong></p></td>
+<td><div class="figure align-default">
+<img alt="../../_images/electrodes.jpg" src="../../_images/electrodes.jpg" />
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>4 x electric field cables</strong></p></td>
+<td><div class="figure align-default">
+<img alt="../../_images/cable.jpg" src="../../_images/cable.jpg" />
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p><strong>12V battery</strong></p></td>
+<td><div class="figure align-default">
+<img alt="../../_images/battery.jpg" src="../../_images/battery.jpg" />
+</div>
+</td>
+</tr>
+<tr class="row-even"><td><p><strong>Laptop</strong> (Not required in Manual mode)</p></td>
+<td><div class="figure align-default">
+<img alt="../../_images/laptop.jpg" src="../../_images/laptop.jpg" />
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition-note admonition">
+<p class="admonition-title">Note</p>
+<p>The following steps assumes that the user had successfully buried the electrodes and connected all the cables to the EDE.</p>
+</div>
+</div>
+<div class="section" id="automatic-mode">
+<h2>Automatic Mode<a class="headerlink" href="#automatic-mode" title="Permalink to this headline">¶</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The following tuturial has been carried out using <em>software version 6.31</em>. Menus can look slightly different in other versions.</p>
+</div>
+<div class="section" id="make-a-job-list-file">
+<h3>1. Make a job list file<a class="headerlink" href="#make-a-job-list-file" title="Permalink to this headline">¶</a></h3>
+<p>In order to use the automatic mode or the EDE the user must provide an ASCII file contains the desired recording parameters for all jobs similar to the following example (without comments).</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">Ex</span> <span class="mi">500</span> <span class="n">cm</span>                                          <span class="c1">// Ex dipole length in cm</span>
+<span class="n">Ey</span> <span class="mi">500</span> <span class="n">cm</span>                                          <span class="c1">// Ey dipole length in cm</span>
+<span class="mi">4096</span> <span class="mi">2020</span> <span class="mi">08</span> <span class="mi">24</span> <span class="mo">07</span> <span class="mi">21</span> <span class="mo">00</span> <span class="mi">2020</span> <span class="mi">08</span> <span class="mi">24</span> <span class="mi">08</span> <span class="mi">21</span> <span class="mo">00</span>      <span class="c1">// Job1 // Freq StartDate StartTime StopDate StopTime</span>
+<span class="mi">4096</span> <span class="mi">2020</span> <span class="mi">08</span> <span class="mi">24</span> <span class="mi">08</span> <span class="mi">23</span> <span class="mo">00</span> <span class="mi">2020</span> <span class="mi">08</span> <span class="mi">27</span> <span class="mi">09</span> <span class="mi">23</span> <span class="mo">00</span>      <span class="c1">// Job2 // Freq StartDate StartTime StopDate StopTime</span>
+<span class="mi">512</span> <span class="mi">2020</span> <span class="mi">08</span> <span class="mi">27</span> <span class="mi">09</span> <span class="mi">25</span> <span class="mo">00</span> <span class="mi">2020</span> <span class="mi">08</span> <span class="mi">31</span> <span class="mi">10</span> <span class="mi">25</span> <span class="mo">00</span>       <span class="c1">// Job3 // Freq StartDate StartTime StopDate StopTime</span>
+<span class="mi">256</span> <span class="mi">2020</span> <span class="mi">08</span> <span class="mi">31</span> <span class="mi">10</span> <span class="mi">27</span> <span class="mo">00</span> <span class="mi">2020</span> <span class="mi">08</span> <span class="mi">31</span> <span class="mi">11</span> <span class="mi">27</span> <span class="mo">00</span>       <span class="c1">// Job4 // Freq StartDate StartTime StopDate StopTime</span>
+<span class="mi">1024</span> <span class="mi">2020</span> <span class="mi">09</span> <span class="mi">30</span> <span class="mi">11</span> <span class="mi">29</span> <span class="mo">00</span> <span class="mi">2020</span> <span class="mi">09</span> <span class="mi">30</span> <span class="mi">12</span> <span class="mi">29</span> <span class="mo">00</span>      <span class="c1">// Job5 // Freq StartDate StartTime StopDate StopTime</span>
+<span class="mi">512</span> <span class="mi">2020</span> <span class="mi">09</span> <span class="mi">30</span> <span class="mi">12</span> <span class="mi">31</span> <span class="mo">00</span> <span class="mi">2020</span> <span class="mi">10</span> <span class="mi">30</span> <span class="mi">13</span> <span class="mi">31</span> <span class="mo">00</span>       <span class="c1">// Job6 // Freq StartDate StartTime StopDate StopTime</span>
+</pre></div>
+</div>
+<p>This ASCII file can be either created using <a class="reference internal" href="../softwares/softwares.html#joblist-editor"><span class="std std-ref">EDE Job list Editor</span></a> or created maunaly with any text editor as long it meets
+the following criteria:</p>
+<ol class="arabic simple">
+<li><p><strong>Name</strong> must be <code class="code docutils literal notranslate"><span class="pre">auto_init.cfg</span></code>.</p></li>
+<li><p><strong>Path</strong> must be to the root directory of the data partition i.e. <code class="code docutils literal notranslate"><span class="pre">MTDAT_139</span></code>.</p></li>
+<li><p><strong>Time between jobs</strong> must be <code class="code docutils literal notranslate"><span class="pre">&gt;=</span> <span class="pre">2</span> <span class="pre">minutes</span></code>.</p></li>
+<li><p><strong>Spaces between parameters</strong> must be <code class="code docutils literal notranslate"><span class="pre">one</span> <span class="pre">space</span> <span class="pre">only</span></code>.</p></li>
+</ol>
+</div>
+<div class="section" id="turn-on-the-ede">
+<h3>2. Turn on the EDE<a class="headerlink" href="#turn-on-the-ede" title="Permalink to this headline">¶</a></h3>
+<p>Most EDEs start on immediately after plugging in the power source, if the system doesnt start press ON button.
+Then you will be promoted with a greeting screen as follows.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/greeting.jpg"><img alt="../../_images/greeting.jpg" src="../../_images/greeting.jpg" style="width: 384.8px; height: 128.0px;" /></a>
+<p class="caption"><span class="caption-text">Example of EDE first screen showing serial number and version number</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="select-automatik-mode">
+<h3>3. Select Automatik mode<a class="headerlink" href="#select-automatik-mode" title="Permalink to this headline">¶</a></h3>
+<p>After system boots up, the EDE will show a screen to let the user choose recording mode. In automatic mode,
+pressing the middle/OK button is the <strong>only</strong> interaction required from the user to start recording.</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/mode_select.jpg"><img alt="../../_images/mode_select.jpg" src="../../_images/mode_select.jpg" style="width: 377.20000000000005px; height: 140.6px;" /></a>
+<p class="caption"><span class="caption-text">Mode selection screen</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="wait-for-gps-synchronization">
+<h3>3. Wait for GPS synchronization<a class="headerlink" href="#wait-for-gps-synchronization" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-hint admonition">
+<p class="admonition-title">Hint</p>
+<p>Although the user is not required to interact with the unit from this step forward, it is recommended to wait for GPS sync and the joblist check up before leaving the station unattended.</p>
+</div>
+<p>The EDE will not start recording unless it acquires an accurate GPS synchronization. This process time range is inconsistent which means it can be finished very quickly in less than couple of minutes or very slowly
+and takes more than 30 minutes. The following image shows the GPS sync steps where the unit internal clock uses RTC then GPS and finally UTC.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/gps_sync.jpg"><img alt="../../_images/gps_sync.jpg" src="../../_images/gps_sync.jpg" style="width: 572.1px; height: 275.3px;" /></a>
+<p class="caption"><span class="caption-text">GPS synchronization steps</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="wait-for-job-list-check-up">
+<h3>4. Wait for Job list check up<a class="headerlink" href="#wait-for-job-list-check-up" title="Permalink to this headline">¶</a></h3>
+<p>As soon as the EDE GPS is synchronized, the system start a final jobs check before start recording. The system checks the time and format of the jobs inside <code class="code docutils literal notranslate"><span class="pre">auto_init.cfg</span></code> and determine which jobs will be started
+and which will be neglected.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/jobs_check.jpg"><img alt="../../_images/jobs_check.jpg" src="../../_images/jobs_check.jpg" style="width: 324.0px; height: 329.6px;" /></a>
+<p class="caption"><span class="caption-text">One by one job check up</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="recording-screen">
+<h3>5. Recording screen<a class="headerlink" href="#recording-screen" title="Permalink to this headline">¶</a></h3>
+<p>After the job check, the EDE will show the following recording screen which indicates that the system is wiating for the time of next job to start or will start immediately if the start time is in the past while the
+stop time is still in the future.</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/rec.jpg"><img alt="../../_images/rec.jpg" src="../../_images/rec.jpg" style="width: 381.8px; height: 137.6px;" /></a>
+<p class="caption"><span class="caption-text">Recording screen of EDE</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="manual-mode">
+<h2>Manual Mode<a class="headerlink" href="#manual-mode" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>1. Turn on the EDE<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Most EDEs start on immediately after plugging in the power source, if the system doesnt start press ON button.
+Then you will be promoted with a greeting screen as follows.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="../../_images/greeting.jpg"><img alt="../../_images/greeting.jpg" src="../../_images/greeting.jpg" style="width: 384.8px; height: 128.0px;" /></a>
+<p class="caption"><span class="caption-text">Example of EDE first screen showing serial number and version number</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="select-manual-mode">
+<h3>2. Select Manual mode<a class="headerlink" href="#select-manual-mode" title="Permalink to this headline">¶</a></h3>
+<p>After system boots up, the EDE will show a screen to let the user choose recording mode.</p>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="../../_images/mode_select.jpg"><img alt="../../_images/mode_select.jpg" src="../../_images/mode_select.jpg" style="width: 377.20000000000005px; height: 140.6px;" /></a>
+<p class="caption"><span class="caption-text">Mode selection screen</span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id2">
+<h3>3. Wait for GPS synchronization<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>The EDE will not start recording unless it acquires an accurate GPS synchronization. This process time range is inconsistent which means it can be finished very quickly in less than couple of minutes or very slowly
+and takes more than 30 minutes. The following image shows the GPS sync steps where the unit internal clock uses RTC then GPS and finally UTC.</p>
+<div class="figure align-center" id="id11">
+<a class="reference internal image-reference" href="../../_images/gps_sync.jpg"><img alt="../../_images/gps_sync.jpg" src="../../_images/gps_sync.jpg" style="width: 572.1px; height: 275.3px;" /></a>
+<p class="caption"><span class="caption-text">GPS synchronization steps</span><a class="headerlink" href="#id11" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="connect-usb-stick">
+<h3>4. Connect USB stick<a class="headerlink" href="#connect-usb-stick" title="Permalink to this headline">¶</a></h3>
+<p>From this point it is required to plug in the SSD to the USB socket in order to read/write initial configuration parameters.
+Insert the SSD and press OK</p>
+<div class="figure align-center" id="id12">
+<a class="reference internal image-reference" href="../../_images/usb.jpg"><img alt="../../_images/usb.jpg" src="../../_images/usb.jpg" style="width: 389.8px; height: 137.0px;" /></a>
+<p class="caption"><span class="caption-text">USB stick plug in screen</span><a class="headerlink" href="#id12" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="select-sampling-frequency">
+<h3>5. Select sampling frequency<a class="headerlink" href="#select-sampling-frequency" title="Permalink to this headline">¶</a></h3>
+<p>According to the type of EDE (LF or HF) the sampling frequencies may differ but the selection process is still the same, toggle right or left till you reach the desired sampling frequency and press OK.</p>
+<div class="figure align-center" id="id13">
+<a class="reference internal image-reference" href="../../_images/sample.jpg"><img alt="../../_images/sample.jpg" src="../../_images/sample.jpg" style="width: 383.40000000000003px; height: 138.6px;" /></a>
+<p class="caption"><span class="caption-text">USB stick plug in screen</span><a class="headerlink" href="#id13" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="select-dipole-lengths">
+<h3>6. Select dipole lengths<a class="headerlink" href="#select-dipole-lengths" title="Permalink to this headline">¶</a></h3>
+<p>Toggle right or left till you reach the desired dipole length for N-S and E-W dipoles and press OK</p>
+<div class="figure align-center" id="id14">
+<a class="reference internal image-reference" href="../../_images/dipole.jpg"><img alt="../../_images/dipole.jpg" src="../../_images/dipole.jpg" style="width: 383.40000000000003px; height: 131.4px;" /></a>
+<p class="caption"><span class="caption-text">USB stick plug in screen</span><a class="headerlink" href="#id14" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id3">
+<h3>7. Recording screen<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>After the job check, the EDE will show the following recording screen which indicates that the system is started recording continuously.</p>
+<div class="figure align-center" id="id15">
+<a class="reference internal image-reference" href="../../_images/rec2.jpg"><img alt="../../_images/rec2.jpg" src="../../_images/rec2.jpg" style="width: 381.8px; height: 133.8px;" /></a>
+<p class="caption"><span class="caption-text">Recording screen of EDE</span><a class="headerlink" href="#id15" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../data_format/data_format.html" class="btn btn-neutral float-right" title="Data format description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../overview/overview.html" class="btn btn-neutral float-left" title="Overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Institut für Geophysik, University of Münster.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
